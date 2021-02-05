@@ -1,0 +1,143 @@
+@import "../../../Assets/Style/variables";
+@import "../../../Assets/Style/typography";
+body.dark {
+  .services-icons {
+    &__wrap {
+      &__logo {
+        background: #1a1a1a;
+      }
+    }
+    p {
+      color: #fff;
+    }
+  }
+}
+.services-icons {
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+  #service-switch {
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom:40px;
+    display: inline-block;
+    @media (max-width: $large) {
+      margin-top: 20px;
+    }
+
+    input[type="checkbox"] {
+      &:checked {
+        + .back .toggle {
+          margin-left: 100px;
+        }
+      }
+    }
+  }
+  &__wrap {
+    display: none;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    &.active{
+        display:flex;
+    }
+    @media (min-width: $large) {
+      flex-direction: row;
+      justify-content:center;
+    }
+    &__logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 25%;
+      padding: 15px 25px;
+      margin: 0 5px 20px 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 7px;
+      @media(min-width:$medium){
+          max-width:20%;
+      }
+      @media (min-width: $large) {
+        max-width: 12%;
+      }
+      svg {
+        width: 100%;
+        height: auto;
+        min-height: 75px;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-family: $heading-font;
+        text-align: center;
+      }
+
+      .react {
+        fill: #53c1de;
+      }
+      .sass {
+        fill: #cf649a;
+      }
+      .node {
+        fill: #8cc84b;
+        padding: 4px;
+      }
+      .php {
+        fill: #484a8b;
+      }
+      .adobe {
+        fill: #da1f26;
+      }
+      .invision {
+        fill: #dc395f;
+      }
+      .vue {
+        padding: 10px 5px 0 5px;
+      }
+      .figma{
+          padding:5px 12px;
+      }
+
+      .pack0 {
+        display: none;
+      }
+      .pack1 {
+        display: inline;
+        fill: #555555;
+        stroke: #ffffff;
+        stroke-width: 0.125;
+        stroke-miterlimit: 10;
+      }
+      .pack2 {
+        display: inline;
+      }
+      .pack3 {
+        fill: #555555;
+        stroke: #ffffff;
+        stroke-width: 0.125;
+        stroke-miterlimit: 10;
+      }
+
+      .host0 {
+        display: none;
+      }
+      .host1 {
+        display: inline;
+        fill: #555555;
+        stroke: #ffffff;
+        stroke-width: 0.125;
+        stroke-miterlimit: 10;
+      }
+      .host2 {
+        display: inline;
+      }
+      .host3 {
+        fill: #555555;
+        stroke: #ffffff;
+        stroke-width: 0.125;
+        stroke-miterlimit: 10;
+      }
+    }
+  }
+}

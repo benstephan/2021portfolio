@@ -1,0 +1,53 @@
+@import '../../../Assets/Style/variables';
+@import '../../../Assets/Style/typography';
+
+body.dark{
+    .about-intro{
+        &__content{
+            color:#FFF;
+        }
+    }
+}
+.about-intro{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    margin:0 auto 0 auto;
+    width:95%;
+    max-width:$container;
+    align-items:center;
+    padding-bottom:60px;
+    @media(min-width:$large){
+        margin-top:-200px;
+        flex-direction: row;
+    }
+    &__content{
+        text-align:center;
+        h4{
+            font-size:24px;
+        }
+        @media(min-width:$large){
+            width:50%;
+            text-align:left;
+        }
+    }
+    &__image{
+        
+        margin-bottom:20px;
+        img{
+            @media(max-width:$small){
+                position:relative;
+                margin:0 auto;
+                width:95%;
+                display:block;
+            }
+        }
+        @media(min-width:$large){
+            padding-right:30px;
+            margin-left:-90px;
+            margin-right:90px;
+            margin-bottom:0;
+            width:50%;
+        }
+    }
+}

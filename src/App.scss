@@ -1,0 +1,35 @@
+@import './Assets/Style/variables';
+@import './Assets/Style/typography';
+@import './Assets/Style/buttons';
+body{
+    transition: all .2s;
+}
+body.dark{
+    background:#111;
+    .watermark{
+        svg path{
+            fill:#FFF;
+        }
+    }
+    hr{
+        border:none;
+        border-bottom:1px solid #000;
+    }
+}
+.watermark{
+    position:fixed;
+    right:0;
+    z-index:-1;
+    width:50%;
+    transition: all .2s;
+}
+
+hr{
+    border:none;
+    border-bottom:1px solid #DDD;
+}
+.posts{
+    .preloader{
+        height:100vh;
+    }
+}

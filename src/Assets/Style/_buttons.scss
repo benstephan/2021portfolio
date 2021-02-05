@@ -1,0 +1,22 @@
+.btn{
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    font-family:$heading-font;
+    text-decoration:none;
+    border:none;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    transition: all .2s;
+
+    &:hover{
+        box-shadow: 0 0 14px rgba(0,0,0,0.5);
+    }
+}
+
+.btn-primary{
+    background: $primary-color;
+    color:#FFF;
+}
+.btn-default{
+    background:#FAFAFA;
+}

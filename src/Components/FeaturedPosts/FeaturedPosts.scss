@@ -1,0 +1,19 @@
+@import '../../Assets/Style/variables';
+.featured-posts {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+  margin-top: -80px;
+  
+  @media (min-width: $large) {
+    justify-content: space-evenly;
+    flex-direction:row;
+
+    .featured-post:nth-child(2) {
+      transform: translateY(-40px);
+    }
+    .featured-post:nth-child(3) {
+      transform: translateY(-80px);
+    }
+  }
+}

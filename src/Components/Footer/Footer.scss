@@ -1,0 +1,82 @@
+@import '../../Assets/Style/variables';
+@import '../../Assets/Style/typography';
+.main-footer{
+    background:$primary-color;
+    width:100%;
+    padding-top:60px;
+    &__top{
+        position:relative;
+        width:95%;
+        max-width:$container;
+        margin:0 auto;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        padding-bottom:60px;
+        @media(min-width:$large){
+            flex-direction:row;
+        }
+        &__content{
+            display:block;
+            text-align:center;
+            @media(min-width:$large){
+                text-align:left;
+            }
+            &__headline{
+                display:block;
+                color:#FFF;
+                font-size:36px;
+                font-family: $heading-font;
+            }
+            p{
+                padding-bottom:.5rem;
+                margin-top:.5rem;
+                color:#FFF;
+            }
+            .available-circle{
+                display:inline-block;
+                width:10px;
+                height:10px;
+                margin-right:10px;
+                margin-left:4px;
+                background:#FFF;
+                border-radius:100%;
+
+                &.unavailable{
+                    background:none;
+                    border:2px solid #FFF;
+                }
+            }
+        }
+        &__links{
+            text-align:center;
+            padding-top:20px;
+            @media(min-width:$large){
+                text-align:right;
+                padding-top:0;
+            }
+            &__info{
+                display:block;
+                font-size:24px;
+                color:#FFF;
+                line-height:2rem;
+            }
+            &__social{
+                display:block;
+                padding-top:10px;
+                a{
+                    padding:10px 0 10px 15px;
+                    color:#FFF;
+                    font-size:30px;
+                }
+            }
+        }
+    }
+    &__creds{
+        width:100%;
+        background:#000;
+        text-align:center;
+        padding:15px 0;
+        color:#FFF;
+    }
+}

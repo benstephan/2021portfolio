@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$heading-font: 'Montserrat', sans-serif;
+$body-font: 'Source Sans Pro', sans-serif;
+
+$font-size: 105%; // 16px
+$ratio: 1.12;
+$ratio-large: 1.5;
+
+/* Create Sass type sizes */
+
+$h4: $font-size * $ratio;
+$h3: $h4 * $ratio;
+$h2: $h3 * $ratio;
+$h1: $h2 * $ratio;
+
+/* Sass second scale with larger type sizes */
+
+$h4-large: $font-size * $ratio-large;
+$h3-large: $h4-large * $ratio-large;
+$h2-large: $h3-large * $ratio-large;
+$h1-large: $h2-large * $ratio-large;
+
+:root {
+  --font-size: #{$font-size};
+  --ratio: #{$ratio};
+  --ratio-large: #{$ratio-large};
+
+  font-family:$body-font;
+
+  --h4: calc(var(--font-size) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family:$heading-font;
+  line-height:$ratio;
+  margin-bottom:1.5rem;
+}
+
+p {
+  font-size: $font-size; /* variable fallback for IE11 */
+  font-size: var(--font-size);
+  line-height:1.55em;
+  margin-bottom:1.5rem;
+}
+
+h1 {
+  font-size: $h1; /* variable fallback for IE11 */
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: $h2; /* variable fallback for IE11 */
+  font-size: var(--h2);
+}
+
+/* switch to larger ratio */
+
+@media screen and (min-width: $medium) {
+  :root {
+    --ratio: var(--ratio-large);
+  }
+
+  /** 
+  * 1. Variable fallback for IE11. When no longer supporting IE11, these can be removed and the ratio can be changed with the single variable change above.
+  * This method generates more code than Sass alone but preps the stylesheet for less code with vanilla CSS in the long run
+  */
+
+  h1 {
+    font-size: $h1-large; /* 1 */
+  }
+
+  h2 {
+    font-size: $h2-large; /* 1 */
+  }
+}

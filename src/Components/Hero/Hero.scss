@@ -1,0 +1,31 @@
+@import "../../Assets/Style/variables";
+body.dark {
+  .hero * {
+    color: #fff;
+  }
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: $large) {
+    padding-right: 500px;
+    height: 70vh;
+  }
+  .bordered {
+    position: relative;
+    height: 4px;
+    width: 40px;
+    margin: 0 0 1rem 0;
+    background: $primary-color;
+  }
+  &__wrap {
+    max-width: 500px;
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}

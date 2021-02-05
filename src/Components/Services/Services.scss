@@ -1,0 +1,88 @@
+@import "../../Assets/Style/variables";
+body.dark {
+  .services {
+    &__title {
+      color: #fff;
+    }
+    &__list {
+      &__box {
+        color: #fff;
+      }
+    }
+  }
+  .services-background {
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eeeeee', endColorstr='#a6eeeeee',GradientType=0 );
+  }
+}
+.services-background {
+  background: -moz-linear-gradient(
+    top,
+    rgba(238, 238, 238, 0) 0%,
+    rgba(238, 238, 238, 0.65) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(238, 238, 238, 0) 0%,
+    rgba(238, 238, 238, 0.65) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(238, 238, 238, 0) 0%,
+    rgba(238, 238, 238, 0.65) 100%
+  );
+}
+.services {
+  position: relative;
+  width: 95%;
+  max-width: $container;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eeeeee', endColorstr='#a6eeeeee',GradientType=0 );
+  .bordered {
+    position: relative;
+    height: 3px;
+    width: 50px;
+    margin: 0 auto 1.5rem auto;
+    background: $primary-color;
+  }
+  &__title {
+    text-align: center;
+    padding-bottom: 30px;
+
+    h5 {
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    @media (min-width: $large) {
+      flex-direction: row;
+    }
+    &__box {
+      text-align: center;
+
+      @media (min-width: $large) {
+        width: 33.3%;
+      }
+    }
+  }
+}

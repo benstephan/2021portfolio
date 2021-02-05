@@ -1,0 +1,24 @@
+body.dark {
+  .preloader {
+    svg path {
+      fill: #fff;
+    }
+  }
+}
+.preloader {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  svg {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: inline-block;
+  }
+}
+.large-preloader {
+  height: 100vh;
+}
